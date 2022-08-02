@@ -1,3 +1,9 @@
 .wrapper {
 	max-width: 90rem;
 }
+
+@media (max-width: 768px) {
+	html {
+		font-size: 80%;
+	}
+}
