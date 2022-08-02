@@ -1,3 +1,59 @@
+.todo + .todo {
+	margin-top: 0.75rem;
+}
+
 .todo {
-	
+	padding: 1rem;
+	background: var(--gray-500);
+	border: 1px solid var(--gray-400);
+	border-radius: 8px;
+
+	display: flex;
+	justify-content: flex-start;
+}
+
+.todoChecked {
+	color: var(--purple-dark);
+	cursor: pointer;
+
+	transition: color 0.2s;
+}
+
+.todoChecked:hover {
+	color: var(--purple);
+}
+
+.todoUnchecked {
+	color: var(--blue);
+	cursor: pointer;
+
+	transition: color 0.2s;
+}
+
+.todoUnchecked:hover {
+	color: var(--blue-dark);
+}
+
+.description {
+	margin-left: 0.75rem;
+	width: 100%;
+}
+
+.trash {
+	margin-left: 0.75rem;
+	cursor: pointer;
+	height: 1.5rem;
+	width: 1.5rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	transition: background 0.2s, color 0.2s;
+}
+
+.trash:hover {
+	background: var(--gray-400);
+	color: var(--red-500);
+	border-radius: 4px;
 }
