@@ -5,11 +5,15 @@
 .todo {
 	padding: 1rem;
 	background: var(--gray-500);
-	border: 1px solid var(--gray-400);
+	border: 1px solid var(--gray-500);
 	border-radius: 8px;
 
 	display: flex;
 	justify-content: flex-start;
+}
+
+.todoBorder {
+	border: 1px solid var(--gray-400);
 }
 
 .todoChecked {
@@ -34,7 +38,15 @@
 	color: var(--blue-dark);
 }
 
-.description {
+.todoDescription {
+	margin-left: 0.75rem;
+	width: 100%;
+}
+
+.todoDescriptionCompleted {
+	color: var(--gray-300);
+	text-decoration: line-through;
+
 	margin-left: 0.75rem;
 	width: 100%;
 }

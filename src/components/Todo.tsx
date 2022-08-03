@@ -57,6 +57,26 @@ export function Todo() {
 		setTodoDescription('');
 	}
 
+	function handleCheckTodo(id: string) {
+		setTodos(oldTodos => oldTodos.map(todo => {
+			if (todo.id === id) return { ...todo, isCompleted: true };
+			
+			return todo;
+		}))
+	}
+
+	function handleUnCheckTodo(id: string) {
+		setTodos(oldTodos => oldTodos.map(todo => {
+			if (todo.id === id) return { ...todo, isCompleted: false };
+			
+			return todo;
+		}))
+	}
+
+	function handleDeleteTodo(id: string) {
+		setTodos(oldTodos => oldTodos.filter(todo => todo.id !== id));
+	}
+
 	function getTodosItems() {
 		return todos.map(todo => (
 			<TodoItem 
@@ -64,6 +84,9 @@ export function Todo() {
         id={todo.id}
 				description={todo.description}
 				isCompleted={todo.isCompleted}
+				onCheck={handleCheckTodo}
+				onUnCheck={handleUnCheckTodo}
+				onDelete={handleDeleteTodo}
 			/>
 		))
 	}
