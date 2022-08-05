@@ -45,7 +45,8 @@ export function TodoItem({
 				<CheckCircle 
 					size={24} 
 					onClick={handleUnCheckTodo}
-					className={styles.todoChecked} 
+					className={styles.todoChecked}
+					weight="fill"
 				/>
 			);
 		}

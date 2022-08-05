@@ -12,28 +12,10 @@ interface TodoItem {
 	isCompleted: boolean;
 }
 
-const todosInitial = [
-	{
-		id: '12481948261982461982412',
-		description: 'Ir para faculdade',
-		isCompleted: false
-	},
-	{
-		id: '394u90r3ur93u0r3u4r',
-		description: 'Ler 2 capítulos do livro X',
-		isCompleted: true
-	},
-	{
-		id: '8435FY8934FY9734TF98',
-		description: 'Fazer almoço',
-		isCompleted: true
-	}
-]
-
 const INITIAL_COUNT_COMPLETE_TODOS = 0;
 
 export function Todo() {
-	const [todos, setTodos] = useState<TodoItem[]>(todosInitial);
+	const [todos, setTodos] = useState<TodoItem[]>([]);
 	const [todoDescription, setTodoDescription] = useState('');
 
 	function handleSubmitForm(event: FormEvent) {

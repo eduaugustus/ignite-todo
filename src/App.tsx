@@ -1,8 +1,8 @@
 import { Header } from './components/Header';
 import { Todo } from './components/Todo';
-import styles from './App.module.css';
 
 import './global.css';
+import './App.css';
 
 function App() {
   return (

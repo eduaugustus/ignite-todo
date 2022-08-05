@@ -1,6 +1,6 @@
 .todo {
-	width: 46rem;
 	margin: 0 auto;
+	max-width: 46rem;
 
 	display: flex;
 	flex-direction: column;
@@ -41,6 +41,7 @@
 
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	gap: 0.5rem;
 
 	transition: background-color 0.1s;
@@ -93,4 +94,14 @@
 	margin-left: 0.5rem;
 	padding: 0.125rem 0.5rem;
 	border-radius: 1rem;
+}
+
+@media (max-width: 768px) {
+	.todo {
+		margin: 0 1.143rem;
+	}
+
+	.form {
+		flex-direction: column;
+	}
 }
